@@ -1,5 +1,5 @@
 import { Component, HostBinding, effect, signal } from '@angular/core';
-import { ThemeServiceService } from './services/theme/theme-service.service';
+import { ThemeService } from './services/theme/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ export class AppComponent {
     return this.themeService.darkMode();
   }
 
-  constructor(private themeService: ThemeServiceService) {
+  constructor(private themeService: ThemeService) {
     effect(() => {
       window.localStorage.setItem(
         'darkMode',
