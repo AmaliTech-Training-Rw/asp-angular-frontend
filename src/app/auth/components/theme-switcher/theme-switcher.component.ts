@@ -1,5 +1,5 @@
 import { Component, effect, signal } from '@angular/core';
-import { ThemeServiceService } from 'src/app/services/theme/theme-service.service';
+import { ThemeService } from 'src/app/services/theme/theme.service';
 
 @Component({
   selector: 'app-theme-switcher',
@@ -9,5 +9,5 @@ import { ThemeServiceService } from 'src/app/services/theme/theme-service.servic
 export class ThemeSwitcherComponent {
   darkMode = this.themeService.darkMode;
 
-  constructor(private themeService: ThemeServiceService) {}
+  constructor(private themeService: ThemeService) {}
 }
