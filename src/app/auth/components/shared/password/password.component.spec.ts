@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 import { PasswordComponent } from './password.component';
 
@@ -8,7 +9,8 @@ describe('PasswordComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PasswordComponent]
+      declarations: [PasswordComponent],
+      imports: [FormsModule], // Add FormsModule to the imports array
     });
     fixture = TestBed.createComponent(PasswordComponent);
     component = fixture.componentInstance;
